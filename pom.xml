@@ -8,6 +8,7 @@
 		<version>3.2.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<packaging>war</packaging>
 	<groupId>com.illustration</groupId>
 	<artifactId>illustration-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -64,6 +65,11 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		    <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-tomcat</artifactId>
+             <scope>provided</scope>
+    </dependency>
 	</dependencies>
 
 	<build>
@@ -76,6 +82,10 @@
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+						</exclude>
+						<exclude>
+						     <groupId>org.springframework.boot</groupId>
+                             <artifactId>spring-boot-starter-web</artifactId>
 						</exclude>
 					</excludes>
 				</configuration>
